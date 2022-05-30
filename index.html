@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <script defer src="./assets/js/script.js"></script>
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <!-- displays the name of the app -->
+    <div id="dashbord" class="text-warning">
+        <div>
+            <div>
+                <h2 class="text-center">Weather Dashboard</h2> 
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="row min-vh-100 no-gutters">
+
+        <!-- navagation menu for defining search criteria  -->
+        <div id="header" class=" col-lg-3 bg-light d-flex flex-column text-center">
+                <form class="d-flex flex-column"  id="user-form" action="">
+                    <label for="">Search for a City</label>
+                    <input class="city" name="city" autofocus="true" id="city" type="text" placeholder="city,state">
+                    <button class="btn" type="submit">Find City</button>
+                </form>
+
+                <h2>Search History:</h2>
+                <div id="history" class="">
+                
+                </div>
+        </div>
+
+
+        <!-- main section the displays all searched data in current and 5 daya forcast -->
+        <main id="main" class="col-lg-9">
+            <div >
+
+                <!-- current date forcast -->
+                <div class="current">
+                    <div class="d-flex">
+                        <h2 id="current-city">City</h2>
+                        <h2 id="current-date">Date</h2>
+                        <span id="current-icon"></span>
+                    </div>
+                    <div>
+                        <p class="temp" id="current-temp">Temp:</p>
+                        <p class="wind" id="current-wind">Wind:</p>
+                        <p class="humidity" id="current-humidity">Humidity:</p>
+                        <p class="uv-index" id="current-uvi">UV Index:</p>
+                    </div>
+
+                </div>  
+
+                <!-- five day forcast section -->
+                    <div>
+                        <h4 class="d-flex">Five Day Forcast:</h4>
+                        <div class="d-flex justify-content-around" id="future-weather-forcast" >
+
+                            <div id="card-1" class=" text-warning col-2 future-title hidden">
+                                <p>Date:</p>
+                                <span>
+                                    <i>0</i>
+                                </span>
+                                <p class="temp">Temp:</p>
+                                <p class="wind">Wind:</p>
+                                <p class="hunidity">Humidity:</p>
+                            </div>
+                           
+
+                        </div>
+                        
+                    </div>
+                
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</body>
+
+</html>
